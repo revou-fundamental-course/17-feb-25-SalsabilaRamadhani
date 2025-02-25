@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #87CEFA, #1E3A8A);
+    color: white;
+    text-align: left;
+}
+header {
+    background: rgba(30, 58, 138, 0.9);
+    padding: 20px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.banner {
+    padding: 50px 20px;
+    background: url('banner.jpg') no-repeat center center/cover;
+}
+.package {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+form {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+input, button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+button {
+    background: #1E3A8A;
+    color: white;
+    cursor: pointer;
+}
+footer {
+    background: rgba(30, 58, 138, 0.9);
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
