@@ -1,3 +1,9 @@
+:root {
+    --primary-color: #7b8bff;;
+    --secondary-color: #000000;
+    --success-color: #1c6380;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +13,7 @@
 
 /* Navbar */
 .navbar {
-    background-color: white;
+    background-color: var(--primary-color);
     border-bottom: 2px solid #ddd;
     padding: 15px 20px;
     position: fixed;
@@ -27,7 +33,7 @@
 .brand {
     font-size: 20px;
     font-weight: bold;
-    color: #091d33;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -44,13 +50,16 @@
 
 .nav-links ul li a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     font-size: 16px;
     transition: color 0.3s;
 }
 
 .nav-links ul li a:hover {
-    color: #091d33;
+    color: var(--secondary-color);
+    outline: none;
+    background: none;
+    
 }
 
 .nav-icons img {
@@ -80,7 +89,7 @@
 }
 
 .hero-text span {
-    color: #091d33;
+    color: #ffffff;
     font-size: 20px;
 }
 
@@ -90,7 +99,7 @@
 }
 
 .hero-text h1 span {
-    color: #091d33;
+    color: #ffffff;
 }
 
 .hero-text h2 {
@@ -111,10 +120,12 @@
 
 .image-placeholder {
     width: 300px;
-    height: 200px;
-    background-color: #ddd;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
     margin-right: 20px;
 }
+
 
 .contact-form {
     background: #fff;
@@ -137,13 +148,13 @@
 }
 
 .contact-form form button {
-    background: #333;
+    background: var(--primary-color);
     color: #fff;
     cursor: pointer;
 }
 
 .contact-form form button:hover {
-    background: #555;
+    background: var(--success-color);
 }
 
 .quote {
@@ -188,7 +199,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     padding: 10px 15px;
     border: 1px solid transparent;
 }
@@ -203,43 +214,90 @@ nav ul li a:hover {
     background: #fff;
 }
 
+.our{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
 .package-list {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .package-item {
+    display: flex;
+    align-items: center;
     background: #eee;
-    margin: 10px;
+    width: 50%;
+    margin: 10px 0;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.closing {
-    text-align: center;
+.package-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.package-text {
+    text-align: left;
+}
+
+.package-text h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.package-text p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+#closing {
+    text-align: center;/* Membuat teks di dalamnya rata tengah */
     padding: 50px;
+    margin-bottom: 10px; /* Memberi jarak dari footer */
+}
+
+.textclosing {
+    text-align: center;
 }
 
 .cta-button {
-    background: #333;
+    background: var(--primary-color);
     color: #fff;
     padding: 10px 20px;
     margin-top: 20px;
     border: none;
     cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cta-button:hover {
-    background: #555;
+    background: #1c6380;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background: #fff;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    background: var(--primary-color);
+    box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.1);
 }
+
+footer p{
+    color: #fff;
+}
+
 
 @media (max-width: 768px) {
     .hero {
@@ -251,4 +309,26 @@ footer {
         width: 80%;
         max-width: 300px;
     }
+}
+
+/* scrollbar */
+html {
+    scroll-behavior: smooth;
+}
+ 
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #1c6380;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1c6380;
 }
